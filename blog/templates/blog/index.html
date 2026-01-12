@@ -1,9 +1,48 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
-  My Blog
+My Blog
+{% endblock  %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'blog/index.css' %}">
 {% endblock  %}
 
 {% block content %}
-  <h1>Welcome to my blog.</h1>
+  <header id='main-navigation'>
+    <h1><a href="">Mahdi's blog</a></h1>
+    <nav>
+      <a href="">All posts</a>
+    </nav>
+  </header>
+
+  <section id='welcome'>
+    <header>
+      <img src="" alt='Mahdi - Author of this blog.'/>
+      <h2>Mahdi's BLOG</h2>
+    </header>
+    <p>Hi, I am Mahdi and i love to blog about tech and the world!</p>
+  </section>
+
+  <section id="latest-posts">
+    <h2>My Latest Thought</h2>
+    <ul>
+      <li>
+        <article class="post">
+          <a href="">
+            <img src="" alt="Mountain Hiking"/>
+            <div class="post__content">
+              <h3>Mountain Hiking</h3>
+              <p>There is nothing like the views you get when hiking in the mountains! And I wasn't even prepared for what happened whilst I was enjoting the view.</p>
+            </div>
+          </a></article>
+      </li>
+    </ul>
+  </section>
+  <section id="about">
+    <h2>What I do?</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi repudiandae quaerat magni obcaecati repellat quibusdam sint dolorum mollitia iste numquam, architecto, provident quam voluptate libero? Laborum cum beatae harum. Officiis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquam quas non iusto soluta accusamus voluptates sint ad dicta quasi voluptatum, odit deserunt ex architecto cumque commodi unde impedit perspiciatis.</p>
+  </section>
 {% endblock  %}
