@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+This post title
+{% endblock  %}
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'blog/post-detail.css' %}">
+{% endblock  %}
+
+{% block content %}
+ <section id='summary'>
+  <h2>Post Title</h2>
+  <article>
+    <img src="{% static "blog/images/mountain.png" %}" alt="Post Title">
+    <address>By Mahdi</address>
+    <div>Last updated on <time>July 12</time></div>
+  </article>
+ </section>
+
+ <main>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi est iusto natus maxime corporis veritatis perferendis optio error adipisci ad laborum, quas esse, quo et? Qui consequatur consectetur quia quam.</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi est iusto natus maxime corporis veritatis perferendis optio error adipisci ad laborum, quas esse, quo et? Qui consequatur consectetur quia quam.</p>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi est iusto natus maxime corporis veritatis perferendis optio error adipisci ad laborum, quas esse, quo et? Qui consequatur consectetur quia quam.</p>
+</main>
+{% endblock %}
