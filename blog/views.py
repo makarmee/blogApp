@@ -16,4 +16,7 @@ def posts(request):
 
 def post_detail(request,slug):
   identifiedPost=get_object_or_404(Post,slug=slug)
-  return render(request,'blog/post-detail.html',{'post':identifiedPost})
+  return render(request,'blog/post-detail.html',{
+    'post':identifiedPost,
+    'post_tags':identifiedPost.tags.all()
+    })
